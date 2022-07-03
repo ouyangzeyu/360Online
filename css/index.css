@@ -1,0 +1,139 @@
+/* 第一屏 */
+.section1>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+/* 动画效果 */
+.section1 .texts img {
+    opacity: 0.3;
+    margin: 0 10px;
+}
+.section1.animation .texts img {
+    opacity: 1;
+    margin: 0;
+    transition: all 1s;
+}
+
+
+/* 第二屏 */
+.section2>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section2 .left {
+    width: 500px;
+    margin-top: 50px;
+}
+/* 动画效果 */
+.section2 .left img:nth-child(3) {
+    transform: translate(180px, 180px) rotate(180deg);
+}
+.section2.animation .left img:nth-child(3) {
+    transform: none;
+    transition: all 1s;
+}
+
+/* 第三屏 */
+.section3>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section3 .right {
+    width: 453px;
+    height: 449px;
+    background: url('../images/circle.png') top left no-repeat;
+    display: flex;
+    /* align-items: flex-end; */
+}
+
+.section3 .right img {
+    align-self: flex-end;
+    transform: translate(-1300px, 300px);
+}
+/* 动画效果 */
+.section3.animation .right img {
+    align-self: flex-end;
+    transform: none;
+    transition: all 1s;
+}
+
+
+/* 第四屏 */
+.section4>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section4 .left {
+    width: 529px;
+    height: 438px;
+    margin-top: 50px;
+}
+.section4 .searchBar {
+    width: 529px;
+    height: 66px;
+    left: 0;
+    top: 0;
+    background: url('../images/search.png') top left no-repeat;
+    position: relative;
+    transform: translateX(-1000px);
+}
+
+.section4.animation .searchBar {
+    transform: none;
+    transition: all 1s;
+}
+
+.section4 .text {
+    /* width: 99px; */
+    width: 0px;
+    height: 22px;
+    background: url('../images/key.png') top left no-repeat;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.section4.animation .text {
+    width: 99px;
+    transition: all 1s steps(5) 1s;
+}
+
+.section4 .result {
+    width: 529px;
+    /* height: 372px; */
+    height: 0px;
+    background: url('../images/result.png') top left no-repeat;
+}
+
+.section4.animation .result {
+    height: 372px;
+    transition: all 1s 2s;
+}
+
+/* 第五屏 */
+.section5>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section5 img {
+    flex-basis: 134px;
+    margin: 20px 0;
+}
+
+.section5 .window {
+    width: 1004px;
+    border: 3px solid #fff;
+    flex: 1;
+    margin: 10px 0;
+    background: url('../images/toolbar.png') top left no-repeat,
+    url('../images/extra.png') right bottom no-repeat;
+}
